@@ -180,6 +180,172 @@ export const caseStudies: ProjectCaseStudy[] = [
       },
     ],
   },
+  {
+    slug: 'aeronautics',
+    route: '/projects/aeronautics',
+    name: 'Aeronautics Reliability',
+    subtitle:
+      'Python-based reliability analysis and operational risk assessment',
+    repository: `${githubOwner}/Aeronautics-reliability`,
+    executiveSummary:
+      'An engineering analysis project connecting Python-based data preparation with reliability investigation, reproducible assessment, and operational interpretation.',
+    ownership:
+      'Completed independently, including analytical framing, implementation, validation, documentation, and repository delivery.',
+    status: 'Engineering Analysis',
+    technologies: [
+      'Python',
+      'Data Analysis',
+      'Reliability Engineering',
+      'Statistical Analysis',
+      'Data Validation',
+      'GitHub',
+    ],
+    metrics: [
+      {
+        label: 'Delivery Model',
+        value: 'Solo',
+        detail: 'Independent analytical implementation',
+      },
+      {
+        label: 'Primary Language',
+        value: 'Python',
+        detail: 'Analysis and data-processing workflow',
+      },
+      {
+        label: 'Engineering Focus',
+        value: 'Reliability',
+        detail: 'Failure-risk and operational interpretation',
+      },
+      {
+        label: 'Method',
+        value: 'Reproducible',
+        detail: 'Code-driven analytical workflow',
+      },
+    ],
+    architecture: [
+      {
+        name: 'Data Inputs',
+        responsibility:
+          'Provides structured information for reliability-oriented investigation and comparison.',
+        technologies: [
+          'Structured data',
+          'Repository datasets',
+          'Source validation',
+        ],
+      },
+      {
+        name: 'Preparation Layer',
+        responsibility:
+          'Cleans, transforms, and organizes data for repeatable analysis.',
+        technologies: [
+          'Python',
+          'Data cleaning',
+          'Data transformation',
+        ],
+      },
+      {
+        name: 'Reliability Analysis',
+        responsibility:
+          'Applies engineering reasoning to patterns relevant to operational reliability.',
+        technologies: [
+          'Reliability engineering',
+          'Statistical reasoning',
+          'Python analysis',
+        ],
+      },
+      {
+        name: 'Validation Layer',
+        responsibility:
+          'Checks assumptions, data quality, and outputs before interpretation.',
+        technologies: [
+          'Data validation',
+          'Consistency checks',
+          'Reproducible execution',
+        ],
+      },
+      {
+        name: 'Engineering Output',
+        responsibility:
+          'Presents findings for technical review and operational interpretation.',
+        technologies: [
+          'Documentation',
+          'Repository artifacts',
+          'Engineering communication',
+        ],
+      },
+    ],
+    sections: [
+      {
+        id: 'problem',
+        title: 'Problem and Constraints',
+        summary:
+          'Investigate aeronautics reliability while keeping assumptions and evidence traceable.',
+        paragraphs: [
+          'Reliability analysis depends on the quality, consistency, and context of available data. The project treats analytical output as supporting evidence for engineering review rather than as an isolated prediction.',
+          'The implementation emphasizes structured preparation, reproducibility, validation, and careful interpretation.',
+        ],
+        bullets: [
+          'Preserve traceability between inputs and analytical outputs.',
+          'Identify data-quality limitations before interpretation.',
+          'Keep the workflow repeatable through code.',
+          'Avoid unsupported operational conclusions.',
+        ],
+      },
+      {
+        id: 'workflow',
+        title: 'Analytical Workflow',
+        paragraphs: [
+          'Python provides the execution environment for preparing information, applying analytical logic, and producing repeatable outputs.',
+          'Input handling, transformation, analysis, validation, and interpretation are separated so each stage can be reviewed independently.',
+        ],
+        bullets: [
+          'Input inspection and data-quality review.',
+          'Cleaning and normalization.',
+          'Reliability-oriented analysis.',
+          'Output validation.',
+          'Technical interpretation and documentation.',
+        ],
+      },
+      {
+        id: 'validation',
+        title: 'Validation and Assumptions',
+        paragraphs: [
+          'Analytical results are only as dependable as their supporting data and assumptions. Validation includes consistency checks and explicit acknowledgement of unsupported conclusions.',
+          'This approach makes the analysis easier to inspect, reproduce, and extend.',
+        ],
+        bullets: [
+          'Check incomplete or inconsistent values.',
+          'Keep transformations reproducible.',
+          'Separate observations from interpretation.',
+          'Document analytical limitations.',
+        ],
+      },
+      {
+        id: 'operations',
+        title: 'Operational Interpretation',
+        paragraphs: [
+          'The project demonstrates how analysis can support reliability discussions without replacing engineering judgment.',
+          'Repository-based delivery preserves the implementation and supporting artifacts for technical review and reruns.',
+        ],
+      },
+      {
+        id: 'outcomes',
+        title: 'Outcomes',
+        paragraphs: [
+          'The project demonstrates Python-based analytical engineering, reliability framing, data preparation, validation, and technical communication.',
+          'The work connects data-science methods to operational reliability questions and engineering constraints.',
+        ],
+      },
+    ],
+    links: [
+      {
+        label: 'View Repository',
+        url: `https://github.com/${githubOwner}/Aeronautics-reliability`,
+        external: true,
+        primary: true,
+      },
+    ],
+  },
 ];
 
 export function getCaseStudy(
