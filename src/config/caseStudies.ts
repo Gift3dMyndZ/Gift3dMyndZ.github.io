@@ -492,6 +492,189 @@ export const caseStudies: ProjectCaseStudy[] = [
       },
     ],
   },
+  {
+    slug: 'smart-contract-engineering',
+    route: '/projects/smart-contract-engineering',
+    name: 'Smart Contract Engineering',
+    subtitle:
+      'Contract architecture, validation, testing, and failure analysis',
+    repository: `${githubOwner}/BGA-hometask-smart-contract-engineer-`,
+    executiveSummary:
+      'A smart-contract engineering exercise focused on explicit state transitions, validation rules, guard conditions, testability, security assumptions, and clearly defined failure behavior.',
+    ownership:
+      'Completed independently, including contract analysis, implementation, validation design, testing strategy, documentation, and repository delivery.',
+    status: 'Engineering Exercise',
+    technologies: [
+      'Smart Contracts',
+      'Contract Architecture',
+      'State Management',
+      'Input Validation',
+      'Security Review',
+      'Automated Testing',
+      'GitHub',
+    ],
+    metrics: [
+      {
+        label: 'Delivery Model',
+        value: 'Solo',
+        detail: 'Independent engineering implementation',
+      },
+      {
+        label: 'Design Focus',
+        value: 'State safety',
+        detail: 'Explicit rules and guarded transitions',
+      },
+      {
+        label: 'Validation',
+        value: 'Defensive',
+        detail: 'Input, state, and condition checks',
+      },
+      {
+        label: 'Verification',
+        value: 'Test driven',
+        detail: 'Expected behavior and failure-path coverage',
+      },
+    ],
+    architecture: [
+      {
+        name: 'Contract Interface',
+        responsibility:
+          'Defines the operations available to callers and the inputs required by each operation.',
+        technologies: [
+          'Public interface',
+          'Typed inputs',
+          'Contract methods',
+        ],
+      },
+      {
+        name: 'State and Business Rules',
+        responsibility:
+          'Maintains contract state and applies the rules governing valid state transitions.',
+        technologies: [
+          'State management',
+          'Business rules',
+          'Deterministic execution',
+        ],
+      },
+      {
+        name: 'Validation and Guards',
+        responsibility:
+          'Rejects invalid inputs, unauthorized conditions, and prohibited transitions before state changes occur.',
+        technologies: [
+          'Input validation',
+          'Guard conditions',
+          'Failure handling',
+        ],
+      },
+      {
+        name: 'Test Harness',
+        responsibility:
+          'Exercises expected behavior, boundary conditions, and failure paths in a reproducible environment.',
+        technologies: [
+          'Automated tests',
+          'Assertions',
+          'Boundary analysis',
+        ],
+      },
+      {
+        name: 'Delivery and Review',
+        responsibility:
+          'Packages implementation, tests, assumptions, and supporting documentation for technical review.',
+        technologies: [
+          'GitHub',
+          'Repository documentation',
+          'Review artifacts',
+        ],
+      },
+    ],
+    sections: [
+      {
+        id: 'problem',
+        title: 'Problem and Constraints',
+        summary:
+          'Implement contract behavior with explicit rules, predictable state changes, and reviewable failure conditions.',
+        paragraphs: [
+          'Smart-contract code executes within a constrained environment where incorrect state changes can be difficult to reverse. The design therefore emphasizes explicit behavior, validation, and deterministic outcomes.',
+          'The exercise treats assumptions and failure paths as first-class engineering concerns rather than relying only on successful execution scenarios.',
+        ],
+        bullets: [
+          'Keep state transitions explicit and reviewable.',
+          'Reject invalid inputs before changing state.',
+          'Define expected failure behavior.',
+          'Preserve deterministic execution.',
+        ],
+      },
+      {
+        id: 'architecture',
+        title: 'Contract Architecture',
+        paragraphs: [
+          'The contract interface separates caller-facing operations from internal state-management and validation concerns.',
+          'Business rules govern when state changes are permitted, while guard conditions reject operations that do not satisfy required preconditions.',
+        ],
+      },
+      {
+        id: 'validation',
+        title: 'Validation Strategy',
+        paragraphs: [
+          'Validation occurs before state mutation so invalid requests cannot leave partial or contradictory results.',
+          'Checks cover caller input, current state, required conditions, and operation-specific constraints.',
+        ],
+        bullets: [
+          'Validate input shape and acceptable values.',
+          'Verify required state before transitions.',
+          'Reject prohibited operations consistently.',
+          'Keep failure behavior explicit.',
+        ],
+      },
+      {
+        id: 'security',
+        title: 'Security Assumptions',
+        paragraphs: [
+          'The engineering review considers trust boundaries, caller-controlled inputs, state integrity, and assumptions made by each contract operation.',
+          'The repository demonstrates security-oriented reasoning but does not represent an external audit or a guarantee of production security.',
+        ],
+      },
+      {
+        id: 'testing',
+        title: 'Testing and Failure Modes',
+        paragraphs: [
+          'Testing covers expected behavior together with invalid inputs, boundary conditions, and prohibited state transitions.',
+          'Failure-path tests verify that rejected operations preserve contract state and return predictable results.',
+        ],
+        bullets: [
+          'Successful operation paths.',
+          'Invalid input handling.',
+          'Boundary-value conditions.',
+          'Rejected state transitions.',
+          'State preservation after failure.',
+        ],
+      },
+      {
+        id: 'tradeoffs',
+        title: 'Engineering Tradeoffs',
+        paragraphs: [
+          'Explicit validation and narrowly defined operations increase code clarity and reviewability, although they can add implementation detail.',
+          'The design favors predictable behavior and testability over unnecessary abstraction.',
+        ],
+      },
+      {
+        id: 'outcomes',
+        title: 'Outcomes',
+        paragraphs: [
+          'The exercise demonstrates contract-oriented architecture, state reasoning, defensive validation, failure analysis, and automated testing.',
+          'The repository provides a reviewable engineering artifact that documents implementation choices and important security assumptions.',
+        ],
+      },
+    ],
+    links: [
+      {
+        label: 'View Repository',
+        url: `https://github.com/${githubOwner}/BGA-hometask-smart-contract-engineer-`,
+        external: true,
+        primary: true,
+      },
+    ],
+  },
 ];
 
 export function getCaseStudy(
