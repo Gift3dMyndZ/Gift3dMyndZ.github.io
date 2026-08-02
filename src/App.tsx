@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router';
 import { AppShell } from './components/layout/AppShell';
 import { HomePage } from './pages/HomePage';
+import { DashboardPage } from './pages/DashboardPage';
 import { ProjectsPage } from './pages/ProjectsPage';
 import { PlaceholderPage } from './pages/PlaceholderPage';
 
@@ -9,7 +10,7 @@ const placeholder = (title: string, description: string) => <PlaceholderPage tit
 const router = createBrowserRouter([{
   path: '/', element: <AppShell />, children: [
     { index: true, element: <HomePage /> },
-    { path: 'dashboard', element: placeholder('Live Engineering Dashboard', 'GitHub metrics, workflow state, deployment health, languages, and recent engineering activity.') },
+    { path: 'dashboard', element: <DashboardPage /> },
     { path: 'projects', element: <ProjectsPage /> },
     { path: 'projects/labyrinth', element: placeholder('Labyrinth of Tartarus', 'Adaptive AI simulation engine, Oracle behavioral system, FastAPI, WebSockets, SQLite, and live deployment.') },
     { path: 'projects/aeronautics', element: placeholder('Aeronautics Reliability', 'Reliability engineering, observability, incident response, and production platform architecture.') },
