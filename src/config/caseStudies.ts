@@ -180,6 +180,501 @@ export const caseStudies: ProjectCaseStudy[] = [
       },
     ],
   },
+  {
+    slug: 'aeronautics',
+    route: '/projects/aeronautics',
+    name: 'Aeronautics Reliability',
+    subtitle:
+      'Python-based reliability analysis and operational risk assessment',
+    repository: `${githubOwner}/Aeronautics-reliability`,
+    executiveSummary:
+      'An engineering analysis project connecting Python-based data preparation with reliability investigation, reproducible assessment, and operational interpretation.',
+    ownership:
+      'Completed independently, including analytical framing, implementation, validation, documentation, and repository delivery.',
+    status: 'Engineering Analysis',
+    technologies: [
+      'Python',
+      'Data Analysis',
+      'Reliability Engineering',
+      'Statistical Analysis',
+      'Data Validation',
+      'GitHub',
+    ],
+    metrics: [
+      {
+        label: 'Delivery Model',
+        value: 'Solo',
+        detail: 'Independent analytical implementation',
+      },
+      {
+        label: 'Primary Language',
+        value: 'Python',
+        detail: 'Analysis and data-processing workflow',
+      },
+      {
+        label: 'Engineering Focus',
+        value: 'Reliability',
+        detail: 'Failure-risk and operational interpretation',
+      },
+      {
+        label: 'Method',
+        value: 'Reproducible',
+        detail: 'Code-driven analytical workflow',
+      },
+    ],
+    architecture: [
+      {
+        name: 'Data Inputs',
+        responsibility:
+          'Provides structured information for reliability-oriented investigation and comparison.',
+        technologies: [
+          'Structured data',
+          'Repository datasets',
+          'Source validation',
+        ],
+      },
+      {
+        name: 'Preparation Layer',
+        responsibility:
+          'Cleans, transforms, and organizes data for repeatable analysis.',
+        technologies: [
+          'Python',
+          'Data cleaning',
+          'Data transformation',
+        ],
+      },
+      {
+        name: 'Reliability Analysis',
+        responsibility:
+          'Applies engineering reasoning to patterns relevant to operational reliability.',
+        technologies: [
+          'Reliability engineering',
+          'Statistical reasoning',
+          'Python analysis',
+        ],
+      },
+      {
+        name: 'Validation Layer',
+        responsibility:
+          'Checks assumptions, data quality, and outputs before interpretation.',
+        technologies: [
+          'Data validation',
+          'Consistency checks',
+          'Reproducible execution',
+        ],
+      },
+      {
+        name: 'Engineering Output',
+        responsibility:
+          'Presents findings for technical review and operational interpretation.',
+        technologies: [
+          'Documentation',
+          'Repository artifacts',
+          'Engineering communication',
+        ],
+      },
+    ],
+    sections: [
+      {
+        id: 'problem',
+        title: 'Problem and Constraints',
+        summary:
+          'Investigate aeronautics reliability while keeping assumptions and evidence traceable.',
+        paragraphs: [
+          'Reliability analysis depends on the quality, consistency, and context of available data. The project treats analytical output as supporting evidence for engineering review rather than as an isolated prediction.',
+          'The implementation emphasizes structured preparation, reproducibility, validation, and careful interpretation.',
+        ],
+        bullets: [
+          'Preserve traceability between inputs and analytical outputs.',
+          'Identify data-quality limitations before interpretation.',
+          'Keep the workflow repeatable through code.',
+          'Avoid unsupported operational conclusions.',
+        ],
+      },
+      {
+        id: 'workflow',
+        title: 'Analytical Workflow',
+        paragraphs: [
+          'Python provides the execution environment for preparing information, applying analytical logic, and producing repeatable outputs.',
+          'Input handling, transformation, analysis, validation, and interpretation are separated so each stage can be reviewed independently.',
+        ],
+        bullets: [
+          'Input inspection and data-quality review.',
+          'Cleaning and normalization.',
+          'Reliability-oriented analysis.',
+          'Output validation.',
+          'Technical interpretation and documentation.',
+        ],
+      },
+      {
+        id: 'validation',
+        title: 'Validation and Assumptions',
+        paragraphs: [
+          'Analytical results are only as dependable as their supporting data and assumptions. Validation includes consistency checks and explicit acknowledgement of unsupported conclusions.',
+          'This approach makes the analysis easier to inspect, reproduce, and extend.',
+        ],
+        bullets: [
+          'Check incomplete or inconsistent values.',
+          'Keep transformations reproducible.',
+          'Separate observations from interpretation.',
+          'Document analytical limitations.',
+        ],
+      },
+      {
+        id: 'operations',
+        title: 'Operational Interpretation',
+        paragraphs: [
+          'The project demonstrates how analysis can support reliability discussions without replacing engineering judgment.',
+          'Repository-based delivery preserves the implementation and supporting artifacts for technical review and reruns.',
+        ],
+      },
+      {
+        id: 'outcomes',
+        title: 'Outcomes',
+        paragraphs: [
+          'The project demonstrates Python-based analytical engineering, reliability framing, data preparation, validation, and technical communication.',
+          'The work connects data-science methods to operational reliability questions and engineering constraints.',
+        ],
+      },
+    ],
+    links: [
+      {
+        label: 'View Repository',
+        url: `https://github.com/${githubOwner}/Aeronautics-reliability`,
+        external: true,
+        primary: true,
+      },
+    ],
+  },
+  {
+    slug: 'data-science',
+    route: '/projects/data-science',
+    name: 'Data Science Projects',
+    subtitle:
+      'Machine learning experimentation and distributed data architecture',
+    repository: `${githubOwner}/Data-Science-Projects`,
+    executiveSummary:
+      'A portfolio of data-science work covering data preparation, TensorFlow and Keras experimentation, LSTM modeling, model evaluation, distributed processing, cloud data services, and governance-oriented architecture.',
+    ownership:
+      'Completed independently, including analytical design, implementation, experimentation, evaluation, documentation, and repository delivery.',
+    status: 'Research Portfolio',
+    technologies: [
+      'Python',
+      'TensorFlow',
+      'Keras',
+      'LSTM',
+      'Apache Spark',
+      'AWS Glue',
+      'AWS Data Lake',
+      'Hadoop',
+      'HDFS',
+      'MapReduce',
+      'Kinesis',
+    ],
+    metrics: [
+      {
+        label: 'Delivery Model',
+        value: 'Solo',
+        detail: 'Independent experimentation and implementation',
+      },
+      {
+        label: 'Modeling Focus',
+        value: 'Sequential',
+        detail: 'LSTM and neural-network experimentation',
+      },
+      {
+        label: 'Data Processing',
+        value: 'Distributed',
+        detail: 'Spark, Glue, and Hadoop architecture',
+      },
+      {
+        label: 'Architecture',
+        value: 'Cloud data',
+        detail: 'Data-lake and streaming concepts',
+      },
+    ],
+    architecture: [
+      {
+        name: 'Data Sources',
+        responsibility:
+          'Provides structured inputs for analysis, transformation, and modeling experiments.',
+        technologies: ['Datasets', 'Kinesis', 'Data inputs'],
+      },
+      {
+        name: 'Preparation and Validation',
+        responsibility:
+          'Cleans, transforms, validates, and organizes data before experimentation.',
+        technologies: ['Python', 'Feature preparation', 'Validation'],
+      },
+      {
+        name: 'Modeling and Experimentation',
+        responsibility:
+          'Implements and evaluates machine-learning approaches for sequential data.',
+        technologies: ['TensorFlow', 'Keras', 'LSTM'],
+      },
+      {
+        name: 'Distributed Processing',
+        responsibility:
+          'Represents scalable transformation patterns across cloud and Hadoop ecosystems.',
+        technologies: ['Spark', 'AWS Glue', 'Hadoop', 'HDFS', 'MapReduce'],
+      },
+      {
+        name: 'Evaluation and Governance',
+        responsibility:
+          'Connects model evaluation, data quality, traceability, and governance controls.',
+        technologies: ['Model evaluation', 'Data governance', 'Architecture controls'],
+      },
+    ],
+    sections: [
+      {
+        id: 'scope',
+        title: 'Problem and Analytical Scope',
+        summary:
+          'Apply data-science methods while preserving reproducibility, validation, and architectural context.',
+        paragraphs: [
+          'Machine-learning experimentation requires more than model construction. Data preparation, assumptions, evaluation criteria, and the surrounding architecture determine whether results can be reviewed and extended.',
+          'The project collection connects modeling work with distributed processing, cloud data services, and governance concepts.',
+        ],
+      },
+      {
+        id: 'preparation',
+        title: 'Data Preparation',
+        paragraphs: [
+          'Cleaning, transformation, validation, and feature organization are treated as explicit stages rather than hidden preprocessing.',
+          'This separation improves traceability between source data, model inputs, and analytical observations.',
+        ],
+        bullets: [
+          'Inspect source structure and quality.',
+          'Apply repeatable transformations.',
+          'Validate model-ready inputs.',
+          'Document assumptions and limitations.',
+        ],
+      },
+      {
+        id: 'modeling',
+        title: 'Modeling and Experimentation',
+        paragraphs: [
+          'TensorFlow and Keras provide the modeling environment, including LSTM experimentation for sequential patterns.',
+          'Experiments remain reviewable through explicit configuration, inputs, and evaluation steps.',
+        ],
+      },
+      {
+        id: 'distributed-data',
+        title: 'Distributed Data Architecture',
+        paragraphs: [
+          'Spark, AWS Glue, and Hadoop concepts support distributed transformation and data-lake workflows.',
+          'HDFS and MapReduce represent distributed foundations, while Kinesis represents streaming ingestion patterns.',
+        ],
+      },
+      {
+        id: 'evaluation',
+        title: 'Evaluation and Governance',
+        paragraphs: [
+          'Evaluation checks whether results align with the experiment design and available evidence.',
+          'Governance considerations connect data ownership, quality, traceability, transformations, models, and interpretation.',
+        ],
+      },
+      {
+        id: 'outcomes',
+        title: 'Outcomes',
+        paragraphs: [
+          'The portfolio demonstrates independent work across machine learning, sequential modeling, distributed processing, cloud data architecture, and governance concepts.',
+          'The work connects experimental code with broader data-engineering and platform considerations.',
+        ],
+      },
+    ],
+    links: [
+      {
+        label: 'View Repository',
+        url: `https://github.com/${githubOwner}/Data-Science-Projects`,
+        external: true,
+        primary: true,
+      },
+    ],
+  },
+  {
+    slug: 'smart-contract-engineering',
+    route: '/projects/smart-contract-engineering',
+    name: 'Smart Contract Engineering',
+    subtitle:
+      'Contract architecture, validation, testing, and failure analysis',
+    repository: `${githubOwner}/BGA-hometask-smart-contract-engineer-`,
+    executiveSummary:
+      'A smart-contract engineering exercise focused on explicit state transitions, validation rules, guard conditions, testability, security assumptions, and clearly defined failure behavior.',
+    ownership:
+      'Completed independently, including contract analysis, implementation, validation design, testing strategy, documentation, and repository delivery.',
+    status: 'Engineering Exercise',
+    technologies: [
+      'Smart Contracts',
+      'Contract Architecture',
+      'State Management',
+      'Input Validation',
+      'Security Review',
+      'Automated Testing',
+      'GitHub',
+    ],
+    metrics: [
+      {
+        label: 'Delivery Model',
+        value: 'Solo',
+        detail: 'Independent engineering implementation',
+      },
+      {
+        label: 'Design Focus',
+        value: 'State safety',
+        detail: 'Explicit rules and guarded transitions',
+      },
+      {
+        label: 'Validation',
+        value: 'Defensive',
+        detail: 'Input, state, and condition checks',
+      },
+      {
+        label: 'Verification',
+        value: 'Test driven',
+        detail: 'Expected behavior and failure-path coverage',
+      },
+    ],
+    architecture: [
+      {
+        name: 'Contract Interface',
+        responsibility:
+          'Defines the operations available to callers and the inputs required by each operation.',
+        technologies: [
+          'Public interface',
+          'Typed inputs',
+          'Contract methods',
+        ],
+      },
+      {
+        name: 'State and Business Rules',
+        responsibility:
+          'Maintains contract state and applies the rules governing valid state transitions.',
+        technologies: [
+          'State management',
+          'Business rules',
+          'Deterministic execution',
+        ],
+      },
+      {
+        name: 'Validation and Guards',
+        responsibility:
+          'Rejects invalid inputs, unauthorized conditions, and prohibited transitions before state changes occur.',
+        technologies: [
+          'Input validation',
+          'Guard conditions',
+          'Failure handling',
+        ],
+      },
+      {
+        name: 'Test Harness',
+        responsibility:
+          'Exercises expected behavior, boundary conditions, and failure paths in a reproducible environment.',
+        technologies: [
+          'Automated tests',
+          'Assertions',
+          'Boundary analysis',
+        ],
+      },
+      {
+        name: 'Delivery and Review',
+        responsibility:
+          'Packages implementation, tests, assumptions, and supporting documentation for technical review.',
+        technologies: [
+          'GitHub',
+          'Repository documentation',
+          'Review artifacts',
+        ],
+      },
+    ],
+    sections: [
+      {
+        id: 'problem',
+        title: 'Problem and Constraints',
+        summary:
+          'Implement contract behavior with explicit rules, predictable state changes, and reviewable failure conditions.',
+        paragraphs: [
+          'Smart-contract code executes within a constrained environment where incorrect state changes can be difficult to reverse. The design therefore emphasizes explicit behavior, validation, and deterministic outcomes.',
+          'The exercise treats assumptions and failure paths as first-class engineering concerns rather than relying only on successful execution scenarios.',
+        ],
+        bullets: [
+          'Keep state transitions explicit and reviewable.',
+          'Reject invalid inputs before changing state.',
+          'Define expected failure behavior.',
+          'Preserve deterministic execution.',
+        ],
+      },
+      {
+        id: 'architecture',
+        title: 'Contract Architecture',
+        paragraphs: [
+          'The contract interface separates caller-facing operations from internal state-management and validation concerns.',
+          'Business rules govern when state changes are permitted, while guard conditions reject operations that do not satisfy required preconditions.',
+        ],
+      },
+      {
+        id: 'validation',
+        title: 'Validation Strategy',
+        paragraphs: [
+          'Validation occurs before state mutation so invalid requests cannot leave partial or contradictory results.',
+          'Checks cover caller input, current state, required conditions, and operation-specific constraints.',
+        ],
+        bullets: [
+          'Validate input shape and acceptable values.',
+          'Verify required state before transitions.',
+          'Reject prohibited operations consistently.',
+          'Keep failure behavior explicit.',
+        ],
+      },
+      {
+        id: 'security',
+        title: 'Security Assumptions',
+        paragraphs: [
+          'The engineering review considers trust boundaries, caller-controlled inputs, state integrity, and assumptions made by each contract operation.',
+          'The repository demonstrates security-oriented reasoning but does not represent an external audit or a guarantee of production security.',
+        ],
+      },
+      {
+        id: 'testing',
+        title: 'Testing and Failure Modes',
+        paragraphs: [
+          'Testing covers expected behavior together with invalid inputs, boundary conditions, and prohibited state transitions.',
+          'Failure-path tests verify that rejected operations preserve contract state and return predictable results.',
+        ],
+        bullets: [
+          'Successful operation paths.',
+          'Invalid input handling.',
+          'Boundary-value conditions.',
+          'Rejected state transitions.',
+          'State preservation after failure.',
+        ],
+      },
+      {
+        id: 'tradeoffs',
+        title: 'Engineering Tradeoffs',
+        paragraphs: [
+          'Explicit validation and narrowly defined operations increase code clarity and reviewability, although they can add implementation detail.',
+          'The design favors predictable behavior and testability over unnecessary abstraction.',
+        ],
+      },
+      {
+        id: 'outcomes',
+        title: 'Outcomes',
+        paragraphs: [
+          'The exercise demonstrates contract-oriented architecture, state reasoning, defensive validation, failure analysis, and automated testing.',
+          'The repository provides a reviewable engineering artifact that documents implementation choices and important security assumptions.',
+        ],
+      },
+    ],
+    links: [
+      {
+        label: 'View Repository',
+        url: `https://github.com/${githubOwner}/BGA-hometask-smart-contract-engineer-`,
+        external: true,
+        primary: true,
+      },
+    ],
+  },
 ];
 
 export function getCaseStudy(
