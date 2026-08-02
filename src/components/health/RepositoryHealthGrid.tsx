@@ -17,14 +17,10 @@ export function RepositoryHealthGrid({
   if (loading) {
     return (
       <section className="repository-health-section">
-        <div className="health-section-heading">
-          <div>
-            <p className="eyebrow">
-              OPERATIONAL INTELLIGENCE
-            </p>
-            <h3>Flagship Repository Health</h3>
-          </div>
-        </div>
+        <p className="eyebrow">
+          OPERATIONAL INTELLIGENCE
+        </p>
+        <h3>Flagship Repository Health</h3>
 
         <div
           className="dashboard-loading"
@@ -42,14 +38,10 @@ export function RepositoryHealthGrid({
   if (error) {
     return (
       <section className="repository-health-section">
-        <div className="health-section-heading">
-          <div>
-            <p className="eyebrow">
-              OPERATIONAL INTELLIGENCE
-            </p>
-            <h3>Flagship Repository Health</h3>
-          </div>
-        </div>
+        <p className="eyebrow">
+          OPERATIONAL INTELLIGENCE
+        </p>
+        <h3>Flagship Repository Health</h3>
 
         <div className="dashboard-state dashboard-error">
           <h3>Health telemetry is unavailable</h3>
@@ -70,20 +62,16 @@ export function RepositoryHealthGrid({
   if (healthRecords.length === 0) {
     return (
       <section className="repository-health-section">
-        <div className="health-section-heading">
-          <div>
-            <p className="eyebrow">
-              OPERATIONAL INTELLIGENCE
-            </p>
-            <h3>Flagship Repository Health</h3>
-          </div>
-        </div>
+        <p className="eyebrow">
+          OPERATIONAL INTELLIGENCE
+        </p>
+        <h3>Flagship Repository Health</h3>
 
         <div className="dashboard-state">
           <h3>No flagship telemetry available</h3>
           <p>
             The configured flagship repositories were not
-            found in the current public repository list.
+            found in the public repository list.
           </p>
         </div>
       </section>

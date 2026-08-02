@@ -28,10 +28,7 @@ function getRepositoryName(fullName: string): string {
   return fullName.split('/').at(-1) ?? fullName;
 }
 
-function createExternalLink(
-  url: string,
-  label: string,
-) {
+function externalLink(url: string, label: string) {
   return createElement(
     'a',
     {
@@ -107,7 +104,7 @@ export function RepositoryHealthPanel({
               </span>
             </div>
 
-            {createExternalLink(
+            {externalLink(
               health.commit.url,
               'Open commit',
             )}
@@ -137,13 +134,15 @@ export function RepositoryHealthPanel({
             <div className="health-metadata">
               <span>{health.workflow.branch}</span>
               <span>{health.workflow.event}</span>
-              <span>{health.workflow.conclusion ?? 'Pending'}</span>
+              <span>
+                {health.workflow.conclusion ?? 'Pending'}
+              </span>
               <span>
                 {formatDate(health.workflow.updatedAt)}
               </span>
             </div>
 
-            {createExternalLink(
+            {externalLink(
               health.workflow.url,
               'Open workflow',
             )}
@@ -171,6 +170,7 @@ export function RepositoryHealthPanel({
 
             <div className="health-metadata">
               <code>{health.release.tag}</code>
+
               <span>
                 {formatDate(health.release.publishedAt)}
               </span>
@@ -180,7 +180,7 @@ export function RepositoryHealthPanel({
               )}
             </div>
 
-            {createExternalLink(
+            {externalLink(
               health.release.url,
               'Open release',
             )}
