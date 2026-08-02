@@ -346,6 +346,152 @@ export const caseStudies: ProjectCaseStudy[] = [
       },
     ],
   },
+  {
+    slug: 'data-science',
+    route: '/projects/data-science',
+    name: 'Data Science Projects',
+    subtitle:
+      'Machine learning experimentation and distributed data architecture',
+    repository: `${githubOwner}/Data-Science-Projects`,
+    executiveSummary:
+      'A portfolio of data-science work covering data preparation, TensorFlow and Keras experimentation, LSTM modeling, model evaluation, distributed processing, cloud data services, and governance-oriented architecture.',
+    ownership:
+      'Completed independently, including analytical design, implementation, experimentation, evaluation, documentation, and repository delivery.',
+    status: 'Research Portfolio',
+    technologies: [
+      'Python',
+      'TensorFlow',
+      'Keras',
+      'LSTM',
+      'Apache Spark',
+      'AWS Glue',
+      'AWS Data Lake',
+      'Hadoop',
+      'HDFS',
+      'MapReduce',
+      'Kinesis',
+    ],
+    metrics: [
+      {
+        label: 'Delivery Model',
+        value: 'Solo',
+        detail: 'Independent experimentation and implementation',
+      },
+      {
+        label: 'Modeling Focus',
+        value: 'Sequential',
+        detail: 'LSTM and neural-network experimentation',
+      },
+      {
+        label: 'Data Processing',
+        value: 'Distributed',
+        detail: 'Spark, Glue, and Hadoop architecture',
+      },
+      {
+        label: 'Architecture',
+        value: 'Cloud data',
+        detail: 'Data-lake and streaming concepts',
+      },
+    ],
+    architecture: [
+      {
+        name: 'Data Sources',
+        responsibility:
+          'Provides structured inputs for analysis, transformation, and modeling experiments.',
+        technologies: ['Datasets', 'Kinesis', 'Data inputs'],
+      },
+      {
+        name: 'Preparation and Validation',
+        responsibility:
+          'Cleans, transforms, validates, and organizes data before experimentation.',
+        technologies: ['Python', 'Feature preparation', 'Validation'],
+      },
+      {
+        name: 'Modeling and Experimentation',
+        responsibility:
+          'Implements and evaluates machine-learning approaches for sequential data.',
+        technologies: ['TensorFlow', 'Keras', 'LSTM'],
+      },
+      {
+        name: 'Distributed Processing',
+        responsibility:
+          'Represents scalable transformation patterns across cloud and Hadoop ecosystems.',
+        technologies: ['Spark', 'AWS Glue', 'Hadoop', 'HDFS', 'MapReduce'],
+      },
+      {
+        name: 'Evaluation and Governance',
+        responsibility:
+          'Connects model evaluation, data quality, traceability, and governance controls.',
+        technologies: ['Model evaluation', 'Data governance', 'Architecture controls'],
+      },
+    ],
+    sections: [
+      {
+        id: 'scope',
+        title: 'Problem and Analytical Scope',
+        summary:
+          'Apply data-science methods while preserving reproducibility, validation, and architectural context.',
+        paragraphs: [
+          'Machine-learning experimentation requires more than model construction. Data preparation, assumptions, evaluation criteria, and the surrounding architecture determine whether results can be reviewed and extended.',
+          'The project collection connects modeling work with distributed processing, cloud data services, and governance concepts.',
+        ],
+      },
+      {
+        id: 'preparation',
+        title: 'Data Preparation',
+        paragraphs: [
+          'Cleaning, transformation, validation, and feature organization are treated as explicit stages rather than hidden preprocessing.',
+          'This separation improves traceability between source data, model inputs, and analytical observations.',
+        ],
+        bullets: [
+          'Inspect source structure and quality.',
+          'Apply repeatable transformations.',
+          'Validate model-ready inputs.',
+          'Document assumptions and limitations.',
+        ],
+      },
+      {
+        id: 'modeling',
+        title: 'Modeling and Experimentation',
+        paragraphs: [
+          'TensorFlow and Keras provide the modeling environment, including LSTM experimentation for sequential patterns.',
+          'Experiments remain reviewable through explicit configuration, inputs, and evaluation steps.',
+        ],
+      },
+      {
+        id: 'distributed-data',
+        title: 'Distributed Data Architecture',
+        paragraphs: [
+          'Spark, AWS Glue, and Hadoop concepts support distributed transformation and data-lake workflows.',
+          'HDFS and MapReduce represent distributed foundations, while Kinesis represents streaming ingestion patterns.',
+        ],
+      },
+      {
+        id: 'evaluation',
+        title: 'Evaluation and Governance',
+        paragraphs: [
+          'Evaluation checks whether results align with the experiment design and available evidence.',
+          'Governance considerations connect data ownership, quality, traceability, transformations, models, and interpretation.',
+        ],
+      },
+      {
+        id: 'outcomes',
+        title: 'Outcomes',
+        paragraphs: [
+          'The portfolio demonstrates independent work across machine learning, sequential modeling, distributed processing, cloud data architecture, and governance concepts.',
+          'The work connects experimental code with broader data-engineering and platform considerations.',
+        ],
+      },
+    ],
+    links: [
+      {
+        label: 'View Repository',
+        url: `https://github.com/${githubOwner}/Data-Science-Projects`,
+        external: true,
+        primary: true,
+      },
+    ],
+  },
 ];
 
 export function getCaseStudy(
