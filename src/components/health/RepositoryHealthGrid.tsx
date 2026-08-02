@@ -67,6 +67,29 @@ export function RepositoryHealthGrid({
     );
   }
 
+  if (healthRecords.length === 0) {
+    return (
+      <section className="repository-health-section">
+        <div className="health-section-heading">
+          <div>
+            <p className="eyebrow">
+              OPERATIONAL INTELLIGENCE
+            </p>
+            <h3>Flagship Repository Health</h3>
+          </div>
+        </div>
+
+        <div className="dashboard-state">
+          <h3>No flagship telemetry available</h3>
+          <p>
+            The configured flagship repositories were not
+            found in the current public repository list.
+          </p>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section className="repository-health-section">
       <div className="health-section-heading">

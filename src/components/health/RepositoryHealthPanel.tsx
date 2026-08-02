@@ -1,3 +1,4 @@
+import { createElement } from 'react';
 import {
   Clock3,
   ExternalLink,
@@ -6,7 +7,6 @@ import {
   Package,
   ShieldCheck,
 } from 'lucide-react';
-import { createElement } from 'react';
 import type { RepositoryHealth } from '../../types/health';
 import { HealthBadge } from './HealthBadge';
 
@@ -24,11 +24,11 @@ function formatDate(value: string): string {
   }).format(new Date(value));
 }
 
-function repositoryName(fullName: string): string {
+function getRepositoryName(fullName: string): string {
   return fullName.split('/').at(-1) ?? fullName;
 }
 
-function externalLink(
+function createExternalLink(
   url: string,
   label: string,
 ) {
@@ -41,13 +41,20 @@ function externalLink(
       rel: 'noopener noreferrer',
     },
     label,
-    <ExternalLink aria-hidden="true" size={14} />,
+    createElement(ExternalLink, {
+      'aria-hidden': true,
+      size: 14,
+    }),
   );
 }
 
 export function RepositoryHealthPanel({
   health,
 }: RepositoryHealthPanelProps) {
+  const workflowLabel = `CI: ${health.workflowState
+    .toLowerCase()
+    .replaceAll('_', ' ')}`;
+
   return (
     <article className="repository-health-panel">
       <header className="health-panel-header">
@@ -56,10 +63,13 @@ export function RepositoryHealthPanel({
             FLAGSHIP HEALTH
           </p>
 
-          <h3>{repositoryName(health.repository)}</h3>
+          <h3>{getRepositoryName(health.repository)}</h3>
         </div>
 
-        <div className="health-score">
+        <div
+          className="health-score"
+          aria-label={`Health score ${health.score} out of 100`}
+        >
           <strong>{health.score}</strong>
           <span>/ 100</span>
         </div>
@@ -70,9 +80,7 @@ export function RepositoryHealthPanel({
 
         <HealthBadge
           state={health.workflowState}
-          label={`CI: ${health.workflowState
-            .toLowerCase()
-            .replaceAll('_', ' ')}`}
+          label={workflowLabel}
         />
       </div>
 
@@ -99,7 +107,7 @@ export function RepositoryHealthPanel({
               </span>
             </div>
 
-            {externalLink(
+            {createExternalLink(
               health.commit.url,
               'Open commit',
             )}
@@ -113,7 +121,10 @@ export function RepositoryHealthPanel({
 
       <section className="health-detail">
         <div className="health-detail-heading">
-          <GitPullRequest aria-hidden="true" size={17} />
+          <GitPullRequest
+            aria-hidden="true"
+            size={17}
+          />
           <h4>Latest Workflow</h4>
         </div>
 
@@ -126,12 +137,13 @@ export function RepositoryHealthPanel({
             <div className="health-metadata">
               <span>{health.workflow.branch}</span>
               <span>{health.workflow.event}</span>
+              <span>{health.workflow.conclusion ?? 'Pending'}</span>
               <span>
                 {formatDate(health.workflow.updatedAt)}
               </span>
             </div>
 
-            {externalLink(
+            {createExternalLink(
               health.workflow.url,
               'Open workflow',
             )}
@@ -162,9 +174,13 @@ export function RepositoryHealthPanel({
               <span>
                 {formatDate(health.release.publishedAt)}
               </span>
+
+              {health.release.prerelease && (
+                <span>Prerelease</span>
+              )}
             </div>
 
-            {externalLink(
+            {createExternalLink(
               health.release.url,
               'Open release',
             )}

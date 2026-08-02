@@ -20,7 +20,7 @@ interface HealthBadgeProps {
   label?: string;
 }
 
-function badgeClass(state: HealthBadgeState): string {
+function getBadgeClass(state: HealthBadgeState): string {
   switch (state) {
     case 'HEALTHY':
       return 'health-badge healthy';
@@ -46,7 +46,7 @@ function badgeClass(state: HealthBadgeState): string {
   }
 }
 
-function BadgeIcon({
+function HealthBadgeIcon({
   state,
 }: {
   state: HealthBadgeState;
@@ -84,11 +84,14 @@ function BadgeIcon({
   }
 }
 
-function humanizeState(state: HealthBadgeState): string {
+function formatState(state: HealthBadgeState): string {
   return state
     .toLowerCase()
     .split('_')
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .map(
+      word =>
+        word.charAt(0).toUpperCase() + word.slice(1),
+    )
     .join(' ');
 }
 
@@ -97,9 +100,9 @@ export function HealthBadge({
   label,
 }: HealthBadgeProps) {
   return (
-    <span className={badgeClass(state)}>
-      <BadgeIcon state={state} />
-      {label ?? humanizeState(state)}
+    <span className={getBadgeClass(state)}>
+      <HealthBadgeIcon state={state} />
+      {label ?? formatState(state)}
     </span>
   );
 }
