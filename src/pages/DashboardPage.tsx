@@ -1,11 +1,13 @@
 import { createElement, useMemo, useState } from 'react';
 import { AlertTriangle, Github, RefreshCw } from 'lucide-react';
 import { DashboardMetrics } from '../components/dashboard/DashboardMetrics';
+import { RepositoryHealthGrid } from '../components/health/RepositoryHealthGrid';
 import { RepositoryFilters } from '../components/github/RepositoryFilters';
 import { RepositoryGrid } from '../components/github/RepositoryGrid';
 import { GITHUB_OWNER } from '../config/projects';
 import { useGitHubProfile } from '../hooks/useGitHubProfile';
 import { useRepositories } from '../hooks/useRepositories';
+import { useRepositoryHealth } from '../hooks/useRepositoryHealth';
 import { GitHubApiError } from '../services/github';
 
 function describeError(error: unknown): string {
@@ -47,6 +49,8 @@ export function DashboardPage() {
     () => repositoryQuery.data?.repositories ?? [],
     [repositoryQuery.data?.repositories],
   );
+
+  const healthQuery = useRepositoryHealth(repositories);
 
   const languages = useMemo(
     () =>
@@ -182,6 +186,15 @@ export function DashboardPage() {
       <DashboardMetrics
         profile={profileQuery.data}
         metrics={metrics}
+      />
+
+      <RepositoryHealthGrid
+        healthRecords={healthQuery.data ?? []}
+        loading={healthQuery.isPending}
+        error={healthQuery.error}
+        onRetry={() => {
+          void healthQuery.refetch();
+        }}
       />
 
       <section className="language-summary">
