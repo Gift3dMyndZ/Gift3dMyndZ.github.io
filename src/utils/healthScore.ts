@@ -20,8 +20,11 @@ export interface HealthScoreResult {
 const DAY_MS = 24 * 60 * 60 * 1000;
 
 function ageInDays(value: string): number {
-  return Math.floor(
-    (Date.now() - new Date(value).getTime()) / DAY_MS,
+  return Math.max(
+    0,
+    Math.floor(
+      (Date.now() - new Date(value).getTime()) / DAY_MS,
+    ),
   );
 }
 
@@ -53,10 +56,10 @@ export function calculateHealthScore({
       score += 15;
       reasons.push('Commit activity within 120 days');
     } else {
-      reasons.push('No recent commit activity');
+      reasons.push('No commit activity within 120 days');
     }
   } else {
-    reasons.push('Commit data unavailable');
+    reasons.push('Commit information unavailable');
   }
 
   if (workflowState === 'HEALTHY') {
@@ -71,7 +74,7 @@ export function calculateHealthScore({
   } else if (workflowState === 'FAILING') {
     reasons.push('Latest workflow failed');
   } else {
-    reasons.push('Workflow state unavailable');
+    reasons.push('Workflow information unavailable');
   }
 
   if (hasRelease) {

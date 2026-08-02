@@ -64,5 +64,6 @@ export interface RepositoryHealth {
   deployment: DeploymentHealth | null;
   score: number;
   state: RepositoryHealthState;
+  reasons: string[];
   checkedAt: string;
 }
