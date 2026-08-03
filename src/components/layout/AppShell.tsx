@@ -1,4 +1,5 @@
 import { NavLink, Outlet } from 'react-router';
+import { InvaderField } from '../effects/InvaderField';
 import { Github } from 'lucide-react';
 
 const links = [
@@ -10,6 +11,7 @@ const links = [
 export function AppShell() {
   return (
     <div className="app-shell">
+      <InvaderField />
       <a className="skip-link" href="#main">Skip to content</a>
       <header className="site-header">
         <NavLink className="brand" to="/">JOSHUA WOLFE <small>/ COMMAND CENTER</small></NavLink>
