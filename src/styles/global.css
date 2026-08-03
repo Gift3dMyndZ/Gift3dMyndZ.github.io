@@ -1477,3 +1477,194 @@ footer { padding:1.25rem 0; border-top:1px solid var(--line); color:var(--muted)
     animation: none;
   }
 }
+
+.professional-page {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.professional-hero {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.professional-hero h2 {
+  margin: 0;
+  color: var(--cyan);
+}
+
+.professional-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.professional-summary-grid article {
+  padding: 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(76, 232, 255, 0.04);
+}
+
+.professional-summary-grid strong {
+  display: block;
+  color: var(--green);
+  font-size: 1.25rem;
+}
+
+.professional-summary-grid span {
+  display: block;
+  margin-top: 0.3rem;
+  color: var(--muted);
+  font-size: 0.74rem;
+}
+
+.professional-section {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.professional-card-grid,
+.skills-domain-grid,
+.architecture-documentation-grid,
+.contact-method-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.professional-card-grid.two-column {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.professional-card,
+.skill-domain,
+.architecture-documentation-card {
+  min-width: 0;
+}
+
+.professional-card > svg {
+  color: var(--cyan);
+}
+
+.professional-card h4,
+.skill-domain h3,
+.architecture-documentation-card h3 {
+  color: var(--cyan);
+}
+
+.professional-card p,
+.skill-domain p,
+.architecture-documentation-card p {
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.professional-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.8rem;
+}
+
+.professional-tags span {
+  padding: 0.34rem 0.5rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--cyan);
+  background: rgba(76, 232, 255, 0.05);
+  font-size: 0.68rem;
+}
+
+.architecture-documentation-card > span {
+  color: var(--amber);
+  font: 800 0.68rem ui-monospace, monospace;
+}
+
+.architecture-flow ol {
+  display: grid;
+  gap: 0.55rem;
+  padding-left: 1.3rem;
+  color: var(--muted);
+}
+
+.architecture-boundary p:last-child {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.contact-method {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.8rem;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.contact-method > svg:first-child,
+.contact-method-arrow {
+  color: var(--cyan);
+}
+
+.contact-method div {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.contact-method span {
+  color: var(--muted);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+}
+
+.contact-method strong {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.resume-hero {
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+}
+
+.resume-layout {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.resume-section li,
+.resume-section p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+  .professional-card-grid,
+  .skills-domain-grid,
+  .architecture-documentation-grid,
+  .contact-method-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .professional-card-grid.two-column,
+  .resume-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 650px) {
+  .professional-summary-grid,
+  .professional-card-grid,
+  .skills-domain-grid,
+  .architecture-documentation-grid,
+  .contact-method-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .resume-hero {
+    grid-template-columns: 1fr;
+  }
+}
