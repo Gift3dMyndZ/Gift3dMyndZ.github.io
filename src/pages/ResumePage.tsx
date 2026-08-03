@@ -38,7 +38,7 @@ export function ResumePage() {
 
           <ul>
             <li>
-              Managed 36 Cloud Solution Engineers with direct
+              Managed and mentored five Cloud Solution Engineers with direct
               people-management responsibilities.
             </li>
             <li>

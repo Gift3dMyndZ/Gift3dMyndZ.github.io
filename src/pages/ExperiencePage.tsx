@@ -14,7 +14,7 @@ const leadershipHighlights = [
     icon: Users,
     title: 'People Leadership',
     description:
-      'Managed 36 Cloud Solution Engineers with direct responsibility for coaching, performance support, technical development, and operational alignment.',
+      'Managed and mentored five Cloud Solution Engineers with direct responsibility for coaching, performance support, technical development, and operational alignment.',
   },
   {
     icon: BarChart3,
