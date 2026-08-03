@@ -1,6 +1,7 @@
 import { NavLink, Outlet } from 'react-router';
 import { InvaderField } from '../effects/InvaderField';
 import { Github } from 'lucide-react';
+import { NeuralBrainHud } from '../brain/NeuralBrainHud';
 
 const links = [
   ['/', 'Home'], ['/dashboard', 'Dashboard'], ['/projects', 'Projects'],
@@ -11,6 +12,7 @@ const links = [
 export function AppShell() {
   return (
     <div className="app-shell">
+      <NeuralBrainHud />
       <InvaderField />
       <a className="skip-link" href="#main">Skip to content</a>
       <header className="site-header">
