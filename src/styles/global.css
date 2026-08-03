@@ -1030,3 +1030,198 @@ footer { padding:1.25rem 0; border-top:1px solid var(--line); color:var(--muted)
     grid-template-columns: 1fr;
   }
 }
+
+.invader-field {
+  position: fixed;
+  z-index: 2;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.invader-slot {
+  display: contents;
+}
+
+.pixel-invader {
+  position: absolute;
+  left: var(--invader-left);
+  top: var(--invader-top);
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  width: var(--invader-size);
+  height: var(--invader-size);
+  opacity: 0.2;
+  filter:
+    drop-shadow(
+      0 0 6px
+      color-mix(
+        in srgb,
+        var(--invader-color) 65%,
+        transparent
+      )
+    );
+  will-change: transform;
+}
+
+.invader-pixel {
+  aspect-ratio: 1;
+}
+
+.invader-pixel.active {
+  background: var(--invader-color);
+  box-shadow: 0 0 4px var(--invader-color);
+}
+
+.pixel-invader-animated {
+  animation:
+    invader-drift
+    var(--invader-duration)
+    ease-in-out
+    var(--invader-delay)
+    infinite alternate;
+}
+
+.pixel-invader-static {
+  transform: translate3d(0, 0, 0);
+}
+
+@keyframes invader-drift {
+  0% {
+    transform:
+      translate3d(
+        calc(-18px * var(--invader-direction)),
+        -10px,
+        0
+      )
+      rotate(-2deg);
+  }
+
+  50% {
+    transform:
+      translate3d(
+        calc(16px * var(--invader-direction)),
+        14px,
+        0
+      )
+      rotate(2deg);
+  }
+
+  100% {
+    transform:
+      translate3d(
+        calc(38px * var(--invader-direction)),
+        -4px,
+        0
+      )
+      rotate(-1deg);
+  }
+}
+
+@media (max-width: 700px) {
+  .desktop-only {
+    display: none;
+  }
+
+  .pixel-invader {
+    opacity: 0.14;
+    transform: scale(0.78);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pixel-invader {
+    animation: none;
+    will-change: auto;
+  }
+}
+
+/* Animated command-center stacking */
+.app-shell {
+  position: relative;
+  z-index: 10;
+}
+
+.invader-field {
+  z-index: 2;
+}
+
+
+/* Executive invader motion */
+.pixel-invader {
+  opacity: 0.28;
+  filter:
+    saturate(0.82)
+    drop-shadow(
+      0 0 5px
+      color-mix(
+        in srgb,
+        var(--invader-color) 52%,
+        transparent
+      )
+    );
+}
+
+.pixel-invader-animated {
+  animation:
+    executive-invader-drift
+    var(--invader-duration)
+    cubic-bezier(0.45, 0, 0.55, 1)
+    var(--invader-delay)
+    infinite alternate;
+}
+
+@keyframes executive-invader-drift {
+  0% {
+    transform:
+      translate3d(-22px, -16px, 0)
+      rotate(-1deg);
+  }
+
+  25% {
+    transform:
+      translate3d(8px, 10px, 0)
+      rotate(0deg);
+  }
+
+  50% {
+    transform:
+      translate3d(30px, 24px, 0)
+      rotate(1deg);
+  }
+
+  75% {
+    transform:
+      translate3d(48px, 4px, 0)
+      rotate(0deg);
+  }
+
+  100% {
+    transform:
+      translate3d(70px, -20px, 0)
+      rotate(-1deg);
+  }
+}
+
+@media (max-width: 700px) {
+  .pixel-invader {
+    opacity: 0.18;
+    filter:
+      saturate(0.72)
+      drop-shadow(
+        0 0 3px
+        color-mix(
+          in srgb,
+          var(--invader-color) 42%,
+          transparent
+        )
+      );
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pixel-invader-animated {
+    animation: none;
+    transform: translate3d(0, 0, 0);
+  }
+}
