@@ -10,7 +10,7 @@ export function ResumePage() {
       download: true,
     },
     <Download aria-hidden="true" size={17} />,
-    'Download Resume',
+    'Download Executive Resume',
   );
 
   return (
@@ -21,10 +21,10 @@ export function ResumePage() {
           <h2>Joshua Wolfe</h2>
 
           <p className="lead">
-            Cloud engineering leader and hands-on platform
-            engineer with experience across people management,
-            reliability, observability, software development,
-            data engineering, and machine learning.
+            Senior software engineer and cloud platform leader
+            delivering cloud-native platforms, distributed systems,
+            resilient services, observability, and engineering
+            leadership across enterprise environments.
           </p>
         </div>
 
@@ -38,7 +38,7 @@ export function ResumePage() {
 
           <ul>
             <li>
-              Managed 36 Cloud Solution Engineers with direct
+              Managed 5 Cloud Solution Engineers with direct
               people-management responsibilities.
             </li>
             <li>
@@ -108,6 +108,9 @@ export function ResumePage() {
           <h3>Independent Engineering Delivery</h3>
 
           <ul>
+            <li>
+              Athena Command Engine native C++23 AI orchestration platform.
+            </li>
             <li>
               Labyrinth of Tartarus adaptive AI simulation.
             </li>
