@@ -1668,3 +1668,109 @@ footer { padding:1.25rem 0; border-top:1px solid var(--line); color:var(--muted)
     grid-template-columns: 1fr;
   }
 }
+
+/* Engineering billboard showcase */
+
+.showcase-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.showcase-card {
+  display: grid;
+  gap: 1.25rem;
+  overflow: hidden;
+}
+
+.showcase-card-heading {
+  align-items: flex-start;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.showcase-card-heading > div {
+  max-width: 72ch;
+}
+
+.showcase-card-heading svg {
+  color: #2dd4bf;
+  flex: 0 0 auto;
+}
+
+.showcase-image-link {
+  background: linear-gradient(
+    145deg,
+    rgba(5, 18, 30, 0.96),
+    rgba(4, 10, 18, 0.99)
+  );
+  border: 1px solid rgba(45, 212, 191, 0.24);
+  border-radius: 0.85rem;
+  display: block;
+  overflow: hidden;
+}
+
+.showcase-image {
+  display: block;
+  height: auto;
+  margin-inline: auto;
+  max-height: 78vh;
+  object-fit: contain;
+  object-position: center top;
+  transition:
+    filter 180ms ease,
+    transform 180ms ease;
+  width: 100%;
+}
+
+.showcase-card-portrait .showcase-image {
+  max-width: 52rem;
+}
+
+.showcase-card-landscape .showcase-image {
+  max-width: 100%;
+}
+
+.showcase-image-link:hover .showcase-image,
+.showcase-image-link:focus-visible .showcase-image {
+  filter: brightness(1.05);
+  transform: scale(1.005);
+}
+
+.showcase-card .actions {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+@media (max-width: 760px) {
+  .showcase-card {
+    padding: 1rem;
+  }
+
+  .showcase-image {
+    max-height: none;
+  }
+
+  .showcase-card .actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .showcase-card .button {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .showcase-image {
+    transition: none;
+  }
+
+  .showcase-image-link:hover .showcase-image,
+  .showcase-image-link:focus-visible .showcase-image {
+    transform: none;
+  }
+}

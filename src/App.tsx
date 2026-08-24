@@ -11,6 +11,7 @@ import { HomePage } from './pages/HomePage';
 import { ProjectCaseStudyPage } from './pages/ProjectCaseStudyPage';
 import { ProjectsPage } from './pages/ProjectsPage';
 import { ResumePage } from './pages/ResumePage';
+import { ShowcasePage } from './pages/ShowcasePage';
 import { SkillsPage } from './pages/SkillsPage';
 
 const router = createBrowserRouter([
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
       {
         path: 'projects/:projectSlug',
         element: <ProjectCaseStudyPage />,
+      },
+      {
+        path: 'showcase',
+        element: <ShowcasePage />,
       },
       {
         path: 'architecture',
