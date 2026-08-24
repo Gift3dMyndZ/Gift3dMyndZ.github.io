@@ -675,6 +675,180 @@ export const caseStudies: ProjectCaseStudy[] = [
       },
     ],
   },
+  {
+    slug: 'athena',
+    route: '/projects/athena',
+    name: 'Athena Command Engine',
+    subtitle:
+      'Native C++23 AI orchestration for the Platform Engineering Command Center',
+    repository: `${githubOwner}/athena-command-engine`,
+    executiveSummary:
+      'Athena Command Engine is a native C++23 AI orchestration service being developed as the intelligence layer of the Platform Engineering Command Center. Athena separates HTTP transport, domain validation, orchestration, and inference-provider behavior through a tested, replaceable provider architecture.',
+    ownership:
+      'Independently designed, developed, tested, documented, and versioned by Joshua Wolfe.',
+    status: 'Active Development',
+    technologies: [
+      'C++23',
+      'Drogon',
+      'cpr',
+      'JsonCpp',
+      'CMake',
+      'Ninja',
+      'GoogleTest',
+      'CTest',
+      'llama.cpp',
+    ],
+    metrics: [
+      {
+        label: 'Unit Tests',
+        value: '23',
+        detail:
+          'AIEngine, provider, and structured error-response coverage',
+      },
+      {
+        label: 'REST Scenarios',
+        value: '9',
+        detail:
+          'Network-level API integration coverage',
+      },
+      {
+        label: 'CTest Entries',
+        value: '24/24',
+        detail:
+          'All current automated test entries passing',
+      },
+      {
+        label: 'Current Pass Rate',
+        value: '100%',
+        detail:
+          'Validated orchestration and REST foundation',
+      },
+    ],
+    architecture: [
+      {
+        name: 'Drogon REST Boundary',
+        responsibility:
+          'Accepts HTTP requests, parses JSON, attaches request IDs, and returns structured responses.',
+        technologies: [
+          'Drogon',
+          'JsonCpp',
+          'C++23',
+        ],
+      },
+      {
+        name: 'AIEngine',
+        responsibility:
+          'Validates prompts, temperature, token limits, and provider readiness before delegating inference.',
+        technologies: [
+          'C++23',
+          'Dependency Injection',
+          'RAII',
+        ],
+      },
+      {
+        name: 'Provider Abstraction',
+        responsibility:
+          'Separates orchestration policy from deterministic development and local inference implementations.',
+        technologies: [
+          'ILLMProvider',
+          'DevelopmentProvider',
+          'LlamaCppProvider',
+        ],
+      },
+      {
+        name: 'Local Inference Layer',
+        responsibility:
+          'Will connect Athena to an OpenAI-compatible llama.cpp server backed by a local GGUF instruct model.',
+        technologies: [
+          'cpr',
+          'llama.cpp',
+          'GGUF',
+        ],
+      },
+    ],
+    sections: [
+      {
+        id: 'foundation',
+        title: 'Engineering Foundation',
+        summary:
+          'Athena is being developed from the reliability layer outward.',
+        paragraphs: [
+          'The current implementation establishes clear boundaries between HTTP transport, domain validation, orchestration, and inference-provider behavior.',
+          'A deterministic development provider allows the REST API and orchestration layer to be tested without downloading a model or depending on external inference infrastructure.',
+        ],
+        bullets: [
+          'C++23 orchestration core complete',
+          'Drogon health and chat endpoints complete',
+          'Replaceable provider interface complete',
+          'Structured errors and request correlation complete',
+        ],
+      },
+      {
+        id: 'quality',
+        title: 'Automated Quality Gates',
+        summary:
+          'The current service foundation is protected by fast, repeatable automated validation.',
+        paragraphs: [
+          'Athena currently passes 23 unit tests and nine REST integration scenarios through 24 registered CTest entries.',
+          'The integration lifecycle starts Athena, waits for service health, executes network-level tests, and shuts the service down automatically.',
+        ],
+        bullets: [
+          '23 passing unit tests',
+          '9 passing REST integration scenarios',
+          '24 of 24 CTest entries passing',
+          'Provider behavior and error contracts validated',
+        ],
+      },
+      {
+        id: 'progress',
+        title: 'Current Progress',
+        summary:
+          'The configurable llama.cpp provider foundation is complete.',
+        paragraphs: [
+          'LlamaCppProvider currently validates its base URL and timeout configuration while conforming to the shared provider interface.',
+          'Real model readiness and chat completion remain active development milestones and are not represented as complete.',
+        ],
+        bullets: [
+          'Complete: C++23 service foundation',
+          'Complete: Drogon REST API',
+          'Complete: provider architecture',
+          'Complete: automated quality gates',
+          'Complete: llama.cpp provider foundation',
+          'In progress: real provider readiness',
+          'Planned: GGUF-backed chat completion',
+          'Planned: live Command Center integration',
+        ],
+      },
+      {
+        id: 'next-steps',
+        title: 'Next Engineering Milestones',
+        summary:
+          'The next phase activates local inference while preserving deterministic testing.',
+        paragraphs: [
+          'Athena will first validate a licensed instruct GGUF model directly through llama-server.',
+          'The provider will then implement health checks, OpenAI-compatible chat completion, timeout handling, upstream-response validation, and environment-driven provider selection.',
+        ],
+        bullets: [
+          'Implement real llama.cpp readiness',
+          'Introduce a deterministic HTTP transport boundary',
+          'Implement OpenAI-compatible chat completion',
+          'Map invalid provider responses to HTTP 502',
+          'Select providers through environment configuration',
+          'Expose provider-aware readiness',
+          'Integrate Athena into the Command Center AI operations panel',
+        ],
+      },
+    ],
+    links: [
+      {
+        label: 'View Athena Repository',
+        url:
+          `https://github.com/${githubOwner}/athena-command-engine`,
+        external: true,
+        primary: true,
+      },
+    ],
+  },
 ];
 
 export function getCaseStudy(
