@@ -5,7 +5,7 @@ A live platform engineering portfolio and professional command center built with
 ## Live Application
 
 - Command Center: https://gift3dmyndz.github.io/
-- Resume: https://gift3dmyndz.github.io/joshua-wolfe-resume.pdf
+- Exucutive Resume: https://gift3dmyndz.github.io/joshua-wolfe-resume.pdf
 - LinkedIn: https://www.linkedin.com/in/mrjoshuawolfe
 - GitHub: https://github.com/Gift3dMyndZ
 
@@ -79,6 +79,7 @@ Production URL: https://gift3dmyndz.github.io/
 ## Canonical Integrations
 
 - Command Center: https://github.com/Gift3dMyndZ/Gift3dMyndZ.github.io
+- Athena Command Engine: https://github.com/Gift3dMyndZ/athena-command-engine
 - Labyrinth repository: https://github.com/Gift3dMyndZ/labyrinth-ai-engine
 - Labyrinth live application: https://labyrinth-ai-engine-1.onrender.com/
 - Aeronautics Reliability: https://github.com/Gift3dMyndZ/Aeronautics-reliability
